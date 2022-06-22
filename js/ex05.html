@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.image{ width: 100px; height:100px;}
+	.image{ width: 200px; height:200px;
+		transition: all 1.5s;
+	}
+</style>
+<script type="text/javascript">
+	function test(){
+		let img = document.getElementById('img')
+		img.src ='images/16.gif'
+		img.className ='image2'
+	}
+</script>
+</head>
+<body>
+	<img onclick="test()" class="image" id='img' src="images/car01.png">
+</body>
+</html>

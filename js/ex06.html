@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	function test(){
+		alert('호출')
+		//location.href='ex05.html' 단순페이지 이동
+		fo.submit()//입력한 값을 전달하고자 할때 사용
+	}
+</script>
+	<form id='fo' action="ex05.html">
+		<input type="text" name="abc"><br>
+		<input type="button" onclick="test()" value="전송">
+	</form>
+	
+<script type="text/javascript">
+	function mo(){ location.href='ex05.html'}
+</script>
+	<a href="ex05.html">aaa</a><br>
+	<button type="button" onclick="location.href='ex05.html'">aaa</button>
+	<br>
+	<input type="button" onclick="mo()" value="aaa">
+</body>
+</html>

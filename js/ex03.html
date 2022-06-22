@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var kor = 111 //전역변수 
+		function test(){
+		//var kor =95,지역변수 함수 밖에선 사용불가
+		let kor = 95
+		kor = 100 //var를 안붙이고 변수선언가능 전역변수처럼 사용가능
+					  //test()먼저 선언을 해야만 등록되서 사용가능 *서순
+			document.write(kor+'호출')
+			return '돌려주는 값'
+			//함수안의 지역변수 let 전역변수 var로 많이 사용
+	}
+		var re =test()//100호출
+		document.write(kor+'호출')//111호출
+	</script>
+</body>
+</html>
