@@ -7,7 +7,7 @@
 <body>
 	<div id="digClock01"></div>
 	<button onclick="test()">클릭</button>
-	<button onclick="digClock()">시작</button>
+	<button onclick="timeStart()">시작</button>
 	<button onclick="end()">종료</button>
 	<hr>
 	<div id="dig01"></div>
@@ -39,7 +39,7 @@ function digClock(){
 		today.getDate()+"일" +
 		today.getHour()+"시" +
 		today.getMinutes()+"분" +
-		today.getSecomds()+"초"
+		today.getSeconds()+"초"
 		document.getElementById("digClock01").innerHTML= timeStr
 		e = setTimeout('digClock()', 1000)
 }
@@ -53,6 +53,7 @@ function end(){
 	<p id="d2"></p>
 	<p id="d3"></p>
 	<script type="text/javascript">
+	function test(){
 	var today = new Date()
 	document.getElementById("d1").innerHTML=
 						today.getFullYear()+"년"
@@ -64,8 +65,9 @@ function end(){
 	document.getElementById("d3").innerHTML=
 						today.getHours()+"시"+
 						today.getMinutes()+"분"+
-						today.getSecond()+"초"
-	
+						today.getSeconds()+"초"
+
+	}
 	</script>
 </body>
 </html>
