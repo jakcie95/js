@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+	#img { width:100px; height:100px; }
+	img.abc:hover {width:110px; height: 110px;}
+</style>
+<title>Insert title here</title>
+<script type="text/javascript">
+var img;
+function init(){
+	let list =['test1.jpg','test2.jpg','test3.jpg','test4.jpg','test5.jpg'];
+	for(i=0; i<arr[i].length; i++){
+		img = document.createElement("img")
+		img.src = "images/"+arr[i]
+		img.id = "img"
+		document.getElementById('id').appendChild(img)
+	}
+	let insert=document.getElementById("insert")
+	let selArr = ["야구","야구11","야구22"]
+	for(i=0; i<selArr.length; i++){
+		var opt = document.createElement("option")
+		opt.value = selArr[i]
+		opt.innerHTML = selArr[i]
+		insert.appendChild(opt)
+	}
+}
+function add(){
+	// 배열 생성 후 이미지 이름 5개 저장후 표현
+	img = document.createElement("img")
+	//img.src = "images/img.jpg"
+	//img.id = "img"
+	img.setAttribute("src","images/img.jpg")
+	img.setAttribute("id","img")
+	img.setAttribute("onclick","test(this)")
+	//img.width = 100
+	//img.style.height = "100px"
+	//document.body.appendChild(img)
+	document.getElementById('test').appendChild(img)
+	
+}
+function test(obj){
+	//obj.style.display="none"
+	document.getElementById('test').removeChild(obj)
+}
+function rm(){
+	//document.getElementById('test').removeChild(img)
+	document.getElementById('id').innerHTML = ""
+}
+</script>
+</head>
+<body onload="init()">
+	<select id="insert"></select>
+	<div id="id"></div>
+	
+	<p id="test">test</p>
+	<a href="#" onclick="add()">이미지추가</a>
+	<a href="#" onclick="rm()">이미지삭제</a>
+</body>
+</html>

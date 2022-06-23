@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	var city =['서울','부산','인천']
+	city[3]='다른값'
+	function printArr(){
+		for(i=0; i<city.length; i++){
+			document.write(city[i]+", ")
+		}
+	}
+	printArr()
+	
+	var joinData = city.join('/')
+	document.write(joinData+", ")
+	
+	var arr=[111,222,333]
+	
+	var concatArr = arr.concat(city)
+	document.write(concatArr+"<hr>")
+	
+	arr.push("안녕","하세요")
+	document.write(arr+"<hr>")
+	
+	arr.pop()
+	document.write(arr+"<hr>")
+	
+	arr.unshift()
+	document.write(arr+"<hr>")
+	
+	arr.shift()
+	document.write(arr+"<hr>")
+</script>
+
+</body>
+</html>
+
+
+
+
+
