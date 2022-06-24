@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	function lighton(obj){
+		document.getElementById("myimage").src="images/light_on.jpg"
+	}
+	function lightoff(obj){
+		document.getElementById("myimage").src="images/light_off.jpg"
+	}
+</script>
+<div style="text-align:center;">
+	<img id="myimage" onmousedown="lighton()"
+						onmouseup="lightoff()"
+						src="images/light_off.jpg"
+						width="150" height="180">
+</div>
+</body>
+</html>
