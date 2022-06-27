@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.wrap{ width:960px;height:400px; }
+	.drg { position:fixed; right:20px; top:20px; width: 200px; 
+		height: 150px; background-color: white; border-style: solid;
+		}
+	.header{
+			 text-align:center; cursor:default;
+			background-color: gray; padding: 10px;
+				}
+	img{ width:40px;height:40px; cursor:pointer;}
+	.btn{ display:flex; margin-top:30px;margin-left:30px;}
+	.button1{
+			order:1;
+			}
+			.font_size{order:2; background:yellow;width:60px;
+			height:20px; text-align:center; margin-top:5px;
+			padding: 5px;}
+	.button2{
+			order:3;
+			}
+</style>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="jquery-1.12.1-ui.js"></script>
+<script type="text/javascript">
+$(function(){
+	font=15;
+	$(document).ready(function(){
+	$("#drag").draggable();
+	$("img.button1").click(function(){
+		$("div.wrap").animate({fontSize:font+=3});
+		$("div.font_size").text(font);
+	})
+	$("img.button2").click(function(){
+		$("div.wrap").animate({fontSize: font-=3});
+		$("div.font_size").text(font);
+	})
+	})
+})
+</script>
+</head>
+<body>
+<div class="wrap">
+	<p><b><h1>오늘의 소설</h1></b></p>
+	<p><b><h3>오늘도 덥다</h3></b></p>
+	<p><b><h3>내일도 덥다</h3></b></p>
+	<p><b><h3>모래는 바다</h3></b></p>
+</div>
+<div id="drag" class="drg">
+	<div class="header" style= "height:20px;">리 모 콘</div>
+	<div class="btn">
+	<img class="button1" src="images/add.png"></img>
+	<div class="font_size" >15</div>
+	<img class="button2" src="images/sub.jpg"></img>
+	</div>
+</div>
+</body>
+</html>

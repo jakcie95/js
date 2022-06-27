@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.0.min.js">
+//jquery 혹은 jquery cdn
+</script>
+
+<script type="text/javascript">
+ /*$(document).ready(function(){
+	 $("button").click(function(){//버튼 클릭이 일어나면 함수를 실행
+		 $("p").hide()//p태그를 숨김
+	 })
+	 $("#s").click(function(){
+		 $("p").show()
+	 })
+ })*/
+/*$().ready(function(){
+	 $("button").click(function(){
+		 $("p").hide()
+	 })
+	 $("#s").click(function(){
+		 $("p").show()
+	 })
+ })*/
+ /*$(function(){
+	 $("button").click(function(){//버튼 클릭이 일어나면 함수를 실행
+		 $("p").hide()//p태그를 숨김
+	 })
+	 $("#s").click(function(){
+		 $("p").show()
+	 })
+ })*/
+ function hi(){
+	 $("p").hide()
+ }
+ function sh(){
+	// document.getElementById("p").style.display='block'
+	 $("p").show()
+ }
+</script>
+
+
+</head>
+<body>
+	<p id="p">안녕하세요.</p>
+	<button onclick="hi()">클릭</button>
+	<button id="s" onclick="sh()">보이기</button>
+
+</body>
+</html>
